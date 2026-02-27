@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Unbounded';
+  src: url('/fonts/Unbounded-VariableFont_wght.ttf') format('woff2-variations');
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+
+  font-style: normal;
+}
