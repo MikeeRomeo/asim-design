@@ -1,0 +1,13 @@
+/* Min-width (up) variants */
+@custom-media --sm-up (min-width: 40rem);
+@custom-media --md-up (min-width: 48rem);
+@custom-media --lg-up (min-width: 64rem);
+@custom-media --xl-up (min-width: 80rem);
+@custom-media --2xl-up (min-width: 96rem);
+
+/* Max-width (down) variants */
+@custom-media --sm-down (max-width: 39.9375rem);
+@custom-media --md-down (max-width: 47.9375rem);
+@custom-media --lg-down (max-width: 63.9375rem);
+@custom-media --xl-down (max-width: 79.9375rem);
+@custom-media --2xl-down (max-width: 95.9375rem);

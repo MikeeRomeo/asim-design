@@ -1,14 +1,30 @@
 @theme {
-  --font-base: 'Open-sans';
-  --font-italic: 'Open-sans-italic';
+  --font-base: 'Open Sans', sans-serif;
+  --font-italic: 'Open Sans Italic', sans-serif;
   --font-unbounded: 'Unbounded', sans-serif;
 
   --color-red-50: oklch(0.971 0.013 17.38);
   --color-red-100: oklch(0.936 0.032 17.717);
   --color-red-200: oklch(0.885 0.062 18.334);
-  --color-testing: red;
+  --color-silver: oklch(0.65 0 0);
+  --color-silver-transparent: rgba(79, 79, 79, 0.68);
 
   --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+:root {
+  /* Font-sizes */
+  --fs-title: --spacing(11.5);
+  /* Heights */
+  --h-navbar: --spacing(12);
+
+  @media (min-width: 64rem) {
+    --fs-title: --spacing(21);
+  }
+
+  @media (min-width: 80rem) {
+    --fs-title: --spacing(27.5);
+  }
 }

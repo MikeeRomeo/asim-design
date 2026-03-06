@@ -1,0 +1,12 @@
+.main-title {
+  letter-spacing: -2%;
+  font-size: var(--fs-title);
+  font-family: var(--font-unbounded);
+  font-weight: 600;
+  line-height: 96%;
+}
+
+p {
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.32px;
+}

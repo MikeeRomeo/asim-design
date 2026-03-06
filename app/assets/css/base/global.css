@@ -1,0 +1,14 @@
+body {
+  background-color: var(--color-black);
+}
+
+* {
+  box-sizing: border-box;
+  color: var(--color-white);
+}
+
+main {
+  padding-inline: --spacing(10);
+  width: 100%;
+  min-height: 100%;
+}

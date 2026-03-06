@@ -1,4 +1,12 @@
 @import 'tailwindcss';
 
 @import './base/variables.css';
+@import './base/custom-media.css';
+@import './base/global.css';
+
+/* Type */
 @import './type/fonts.css';
+@import './type/type.css';
+
+/* Navbar */
+@import './components/navbar.css';
