@@ -7,6 +7,7 @@ const carouselConfig = {
   gap: 16,
   transition: 300,
   transitionEasing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+  autoplay: 2000,
 }
 
 const card = useTemplateRef('card')

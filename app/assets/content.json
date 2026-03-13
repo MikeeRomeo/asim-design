@@ -1,0 +1,40 @@
+{
+  "title": "Simplicity",
+  "description": "Ik ontwerp digitale app/web interacties waarbij de gebruikerservaring centraal staat.",
+  "author": "Asim Kaymak",
+  "email": "asim.kaymak@example.com",
+  "phone": "+31642202316",
+  "approachUrl": "notion.com",
+  "resumeSubnav": [
+    {
+      "name": "CV",
+      "url": "notion.com"
+    },
+    {
+      "name": "Showcase",
+      "url": "notion.com"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/asim-kaymak/"
+    }
+  ],
+  "isAvailable": true,
+  "recentJobs": [
+    {
+      "company": "PGGM",
+      "startYear": 2026,
+      "endYear": "heden"
+    },
+    {
+      "company": "Centraal Beheer",
+      "startYear": 2023,
+      "endYear": 2026
+    },
+    {
+      "company": "NS",
+      "startYear": 2024,
+      "endYear": 2025
+    }
+  ]
+}

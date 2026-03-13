@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import content from '~/assets/content.json'
 import { useTilt } from '~/composables/useTilt'
 
 const card = useTemplateRef('card')
@@ -33,7 +34,7 @@ const { tilt, glareStyle } = useTilt(card, {
     </ul>
 
     <ul class="list list--dark mbs-52 md:mbs-96 z-10">
-      <li class="g-border g-border--white">
+      <!-- <li class="g-border g-border--white">
         <span>2026 - heden</span> <span> PGGM</span>
       </li>
       <li class="g-border g-border--white">
@@ -41,6 +42,9 @@ const { tilt, glareStyle } = useTilt(card, {
       </li>
       <li class="g-border g-border--white">
         <span>2025 - 2026</span> <span>NS</span>
+      </li> -->
+      <li v-for="job in content.recentJobs" :key="job.company" class="g-border g-border--white">
+        <span>{{ job.startYear }} - {{ job.endYear }}</span> <span>{{ job.company }}</span>
       </li>
     </ul>
     <div class="card__glare" />
