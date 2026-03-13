@@ -11,7 +11,7 @@
     <p class="font-normal italic pbs-4">
       Asim kaymak
     </p>
-    <section class="grid grid-cols-1 md:grid-cols-12 mbs-14 gap-8">
+    <section class="grid grid-cols-1 md:grid-cols-12 mbs-14 gap-8 mbe-14">
       <CardsResume />
       <CardsBrands />
       <CardsSkills />

@@ -50,4 +50,8 @@
   background-image: url('/graphics/card-bg-1.png');
   background-repeat: no-repeat;
   background-size: cover;
+
+  &.bg-2 {
+    background-image: url('/graphics/card-bg-2.png');
+  }
 }

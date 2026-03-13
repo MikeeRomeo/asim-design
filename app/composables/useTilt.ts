@@ -53,7 +53,7 @@ export function useTilt(
     return {
       '--glare-x': `${px.value * 100}%`,
       '--glare-y': `${py.value * 100}%`,
-      '--glare-opacity': 0.35,
+      '--glare-opacity': 0.25,
     }
   })
 

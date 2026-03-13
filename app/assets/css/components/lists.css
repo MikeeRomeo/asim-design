@@ -32,6 +32,7 @@
       justify-content: space-between;
       color: var(--color-white);
       font-family: var(--font-base);
+      backdrop-filter: blur(19px);
     }
   }
 }

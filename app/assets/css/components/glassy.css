@@ -1,7 +1,7 @@
 .glassy {
   color: var(--color-white);
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(19px);
+  backdrop-filter: blur(2px);
   font-weight: 400;
   padding: --spacing(4) --spacing(5);
   overflow: hidden;
