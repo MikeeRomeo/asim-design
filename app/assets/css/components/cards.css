@@ -14,7 +14,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(circle at var(--glare-x) var(--glare-y), rgba(255, 255, 255, 0.6), transparent 60%);
+    background: radial-gradient(circle at var(--glare-x) var(--glare-y), rgba(255, 255, 255, 0.6), transparent 85%);
     opacity: var(--glare-opacity);
     mix-blend-mode: overlay;
     transition: opacity 0.2s;
@@ -32,6 +32,12 @@
     left: 50%;
     transform: translateZ(50px) translateX(-50%);
     pointer-events: none;
+    transition: transform 0.15s ease;
+  }
+
+  .card__image--shadow {
+    --offset-x: calc(-50% - (var(--glare-x) / 20));
+    transform: translateZ(50px) translateX(var(--offset-x));
   }
 
   .card__title {
@@ -50,8 +56,14 @@
   background-image: url('/graphics/card-bg-1.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   &.bg-2 {
     background-image: url('/graphics/card-bg-2.png');
+  }
+
+  &.bg-3 {
+    background-image: url('/graphics/card-bg-3.png');
+    background-blend-mode: multiply;
   }
 }

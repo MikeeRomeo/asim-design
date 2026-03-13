@@ -8,9 +8,13 @@ body {
 }
 
 main {
-  padding-inline: --spacing(10);
+  padding-inline: --spacing(5);
   width: 100%;
   min-height: 100%;
   max-width: 1440px;
   margin-inline: auto;
+
+  @media (min-width: 768px) {
+    padding-inline: --spacing(10);
+  }
 }

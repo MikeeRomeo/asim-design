@@ -64,7 +64,7 @@ const brands = [
 
 <template>
   <article
-    ref="card" class="card card--glass g-border  md:-col-span-6 lg:col-span-7 row-span-1"
+    ref="card" class="card card--glass g-border  md:col-span-6 lg:col-span-7 row-span-1"
     :style="{ ...tilt, ...glareStyle }"
   >
     <div class="card__glare" />

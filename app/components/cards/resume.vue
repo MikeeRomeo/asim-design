@@ -13,13 +13,14 @@ const { tilt, glareStyle } = useTilt(card, {
 
 <template>
   <article
-    ref="card" class="card card--resume g-border g-border--green md:-col-span-6 lg:col-span-5 row-span-2"
+    ref="card" class="card card--resume g-border g-border--green md:col-span-6 lg:col-span-5 row-span-2"
     :style="{ ...tilt, ...glareStyle }"
   >
     <h2 class="card__title">
       Simplicity
     </h2>
 
+    <img src="/img/profile-shadow.png" alt="It's a me, Asim-sama" class="card__image card__image--shadow">
     <img src="/img/profile.png" alt="It's a me, Asim-sama" class="card__image">
 
     <ul class="list z-10">
@@ -31,7 +32,7 @@ const { tilt, glareStyle } = useTilt(card, {
       </li>
     </ul>
 
-    <ul class="list list--dark mbs-96 z-10">
+    <ul class="list list--dark mbs-52 md:mbs-96 z-10">
       <li class="g-border g-border--white">
         <span>2026 - heden</span> <span> PGGM</span>
       </li>

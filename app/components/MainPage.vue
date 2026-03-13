@@ -1,7 +1,7 @@
 <template>
-  <BaseHeader />
+  <!-- <BaseHeader /> -->
   <main class="font-base lg:pbs-4">
-    <h1 class="main-title">
+    <!-- <h1 class="main-title">
       Creative <br>
       ux designer
     </h1>
@@ -10,11 +10,12 @@
     </p>
     <p class="font-normal italic pbs-4">
       Asim kaymak
-    </p>
+    </p> -->
     <section class="grid grid-cols-1 md:grid-cols-12 mbs-14 gap-8 mbe-14">
       <CardsResume />
       <CardsBrands />
       <CardsSkills />
+      <CardsContact />
     </section>
   </main>
 </template>
