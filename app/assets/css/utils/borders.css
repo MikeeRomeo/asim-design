@@ -32,4 +32,12 @@
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
   }
+
+  &.rounded-lg::before {
+    border-radius: var(--radius-lg);
+  }
+
+  &.card::before {
+    border-radius: var(--radius-card);
+  }
 }

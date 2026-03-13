@@ -68,6 +68,8 @@ export function useTilt(
 
     const { beta, gamma } = useDeviceOrientation()
 
+    let isInteracting = false
+
     function updateMouse() {
       const w = elementWidth.value
       const h = elementHeight.value
@@ -80,6 +82,7 @@ export function useTilt(
         return
       }
 
+      isInteracting = true
       px.value = elementX.value / w
       py.value = elementY.value / h
 
@@ -91,16 +94,25 @@ export function useTilt(
       if (!mobile || beta.value == null || gamma.value == null)
         return
 
+      isInteracting = true
       targetRX.value = beta.value / 45
       targetRY.value = gamma.value / 45
     }
 
     useRafFn(() => {
+      isInteracting = false
       updateMouse()
       updateMobile()
 
-      rx.value += (targetRX.value - rx.value) * speed
-      ry.value += (targetRY.value - ry.value) * speed
+      // Only apply interpolation during interaction, otherwise snap to zero
+      if (isInteracting) {
+        rx.value += (targetRX.value - rx.value) * speed
+        ry.value += (targetRY.value - ry.value) * speed
+      }
+      else {
+        rx.value = 0
+        ry.value = 0
+      }
     })
   })
 

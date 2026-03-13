@@ -19,7 +19,6 @@
     letter-spacing: -0.43px;
     padding: --spacing(3) --spacing(5);
     backdrop-filter: blur(2px);
-    border-radius: var(--radius-base);
   }
 
   &.list--dark {
@@ -31,12 +30,19 @@
     li {
       display: flex;
       justify-content: space-between;
-      font-family: var(--font-base);
       color: var(--color-white);
-      background-color: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(19px);
-      font-weight: 400;
-      padding: --spacing(4) --spacing(5);
+      font-family: var(--font-base);
     }
+  }
+}
+
+.list.list--brands {
+  display: flex;
+  flex-direction: row;
+  gap: --spacing(4);
+  min-width: 100%;
+
+  li {
+    flex-shrink: 0;
   }
 }

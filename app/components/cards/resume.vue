@@ -5,7 +5,7 @@ const card = useTemplateRef('card')
 
 const { tilt, glareStyle } = useTilt(card, {
   max: 6,
-  scale: 1.04,
+  scale: 1,
   glare: true,
   mobile: true,
 })
@@ -13,11 +13,9 @@ const { tilt, glareStyle } = useTilt(card, {
 
 <template>
   <article
-    ref="card" class="card card--resume g-border g-border--green col-span-5 row-span-2"
+    ref="card" class="card card--resume g-border g-border--green md:-col-span-6 lg:col-span-5 row-span-2"
     :style="{ ...tilt, ...glareStyle }"
   >
-    <div class="card__glare" />
-
     <h2 class="card__title">
       Simplicity
     </h2>
@@ -44,5 +42,6 @@ const { tilt, glareStyle } = useTilt(card, {
         <span>2025 - 2026</span> <span>NS</span>
       </li>
     </ul>
+    <div class="card__glare" />
   </article>
 </template>

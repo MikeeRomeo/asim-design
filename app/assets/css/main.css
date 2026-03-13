@@ -12,6 +12,7 @@
 @import './components/navbar.css';
 @import './components/cards.css';
 @import './components/lists.css';
+@import './components/glassy.css';
 
 /* Utilities */
 @import './utils/borders.css';
