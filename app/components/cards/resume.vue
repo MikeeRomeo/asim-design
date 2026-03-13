@@ -1,0 +1,48 @@
+<script setup lang="ts">
+import { useTilt } from '~/composables/useTilt'
+
+const card = useTemplateRef('card')
+
+const { tilt, glareStyle } = useTilt(card, {
+  max: 6,
+  scale: 1.04,
+  glare: true,
+  mobile: true,
+})
+</script>
+
+<template>
+  <article
+    ref="card" class="card card--resume g-border g-border--green col-span-5 row-span-2"
+    :style="{ ...tilt, ...glareStyle }"
+  >
+    <div class="card__glare" />
+
+    <h2 class="card__title">
+      Simplicity
+    </h2>
+
+    <img src="/img/profile.png" alt="It's a me, Asim-sama" class="card__image">
+
+    <ul class="list z-10">
+      <li class="g-border g-border--white">
+        Netflix Steller Strategy Awward winner
+      </li>
+      <li class="g-border g-border--white">
+        Dragon’s Den Pitcher
+      </li>
+    </ul>
+
+    <ul class="list list--dark mbs-96 z-10">
+      <li class="g-border g-border--white">
+        <span>2026 - heden</span> <span> PGGM</span>
+      </li>
+      <li class="g-border g-border--white">
+        <span>2025 - 2026</span> <span>Centraal Beheer</span>
+      </li>
+      <li class="g-border g-border--white">
+        <span>2025 - 2026</span> <span>NS</span>
+      </li>
+    </ul>
+  </article>
+</template>

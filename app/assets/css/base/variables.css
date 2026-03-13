@@ -8,6 +8,12 @@
   --color-red-200: oklch(0.885 0.062 18.334);
   --color-silver: oklch(0.65 0 0);
   --color-silver-transparent: rgba(79, 79, 79, 0.68);
+  --color-becquerel: oklch(0.8056 0.2549 140.36);
+  --color-teal: oklch(0.5392 0.092564 207.5114);
+  --color-dark: #000f10;
+
+  --radius-card: --spacing(4);
+  --radius-base: --spacing(7);
 
   --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -19,6 +25,7 @@
   --fs-title: --spacing(11.5);
   /* Heights */
   --h-navbar: --spacing(12);
+  --mw-container: 1440px;
 
   @media (min-width: 64rem) {
     --fs-title: --spacing(21);

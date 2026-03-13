@@ -8,5 +8,10 @@
 @import './type/fonts.css';
 @import './type/type.css';
 
-/* Navbar */
+/* Components */
 @import './components/navbar.css';
+@import './components/cards.css';
+@import './components/lists.css';
+
+/* Utilities */
+@import './utils/borders.css';

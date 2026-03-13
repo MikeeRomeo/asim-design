@@ -1,0 +1,35 @@
+.g-border {
+  --start: var(--color-silver-transparent);
+  --end: var(--color-silver);
+  --rotation: 45deg;
+  position: relative;
+
+  &.g-border--green {
+    --rotation: 245deg;
+    --start: rgba(0, 255, 0, 0.1);
+    --end: rgba(0, 255, 0, 1);
+  }
+
+  &.g-border--white {
+    --rotation: 5deg;
+    --start: rgba(255, 255, 255, 0.1);
+    --end: rgba(255, 255, 255, 0.7);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius-base);
+    border: 2px solid transparent;
+    background: linear-gradient(var(--rotation), var(--start), var(--end)) border-box;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+}
