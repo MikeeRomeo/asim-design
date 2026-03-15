@@ -54,6 +54,7 @@ const brands = [
     <div class="flex flex-col items-center">
       <h2 class="glassy g-border font-unbounded font-medium text-lg mbe-12">
         Tools experience
+        <img src="/icons/sextand.svg" class="size-5 inline ml-2" alt="">
       </h2>
     </div>
 

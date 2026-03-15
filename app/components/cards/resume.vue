@@ -26,23 +26,16 @@ const { tilt, glareStyle } = useTilt(card, {
 
     <ul class="list z-10">
       <li class="g-border g-border--white">
+        <img src="/icons/cup.svg" class="size-6 inline mr-2" alt="">
         Netflix Steller Strategy Awward winner
       </li>
       <li class="g-border g-border--white">
+        <img src="/icons/cup.svg" class="size-6 inline mr-2" alt="">
         Dragon’s Den Pitcher
       </li>
     </ul>
 
     <ul class="list list--dark mbs-52 md:mbs-96 z-10">
-      <!-- <li class="g-border g-border--white">
-        <span>2026 - heden</span> <span> PGGM</span>
-      </li>
-      <li class="g-border g-border--white">
-        <span>2025 - 2026</span> <span>Centraal Beheer</span>
-      </li>
-      <li class="g-border g-border--white">
-        <span>2025 - 2026</span> <span>NS</span>
-      </li> -->
       <li v-for="job in content.recentJobs" :key="job.company" class="g-border g-border--white">
         <span>{{ job.startYear }} - {{ job.endYear }}</span> <span>{{ job.company }}</span>
       </li>

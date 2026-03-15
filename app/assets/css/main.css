@@ -3,6 +3,7 @@
 @import './base/variables.css';
 @import './base/custom-media.css';
 @import './base/global.css';
+@import './base/animations.css';
 
 /* Type */
 @import './type/fonts.css';
