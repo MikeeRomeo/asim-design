@@ -45,15 +45,15 @@ const chevronClasses = computed(() => ({
       </div>
       <ul class="navbar" role="navbar">
         <li class="max-md:hidden">
-          <a :href="content.approachUrl" class="nav-link g-border">Aanpak</a>
+          <a :href="content.approachUrl" class="nav-link g-border" target="_blank">Aanpak</a>
         </li>
         <li ref="submenuDesktop" class="group max-md:hidden">
-          <button type="button" class="nav-link g-border cursor-pointer relative" @click.stop="toggleSubmenu">
+          <button type="button" class="nav-link g-border cursor-pointer relative">
             <span class="mr-3">Resume</span>
             <img src="/icons/chevron.svg" class="size-4 inline transition-transform" :class="[chevronClasses]" alt="submenu">
           </button>
           <ul class="absolute bg-white rounded-xl px-5 py-3 text-black flex flex-col gap-3 mt-3 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all" :class="submenuClasses" @click.stop>
-            <li v-for="link in content.resumeSubnav" :key="link.url" class="g-border g-border--white">
+            <li v-for="link in content.resumeSubnav" :key="link.url" class="g-border g-border--white" target="_blank">
               <a :href="link.url" class="hover:text-teal inline-flex items-center gap-1">
                 <span>
                   {{ link.name }}
@@ -70,7 +70,7 @@ const chevronClasses = computed(() => ({
 
   <ul class="navbar navbar--mobile pbe-6 px-5" role="navbar">
     <li>
-      <a :href="content.approachUrl" class="nav-link g-border">Aanpak</a>
+      <a :href="content.approachUrl" class="nav-link g-border" target="_blank">Aanpak</a>
     </li>
     <li ref="submenuMobile" class="group relative">
       <button type="button" class="nav-link g-border cursor-pointer relative" @click.stop="toggleSubmenu">
@@ -78,7 +78,7 @@ const chevronClasses = computed(() => ({
         <img src="/icons/chevron.svg" class="size-4 inline transition-transform" :class="[chevronClasses]" alt="submenu">
       </button>
       <ul class="absolute bg-white rounded-xl px-5 py-3 text-black flex flex-col gap-3 mt-3 bottom-[120%] transition-all" :class="submenuClassesMobile" @click.stop>
-        <li v-for="link in content.resumeSubnav" :key="link.url" class="g-border g-border--white">
+        <li v-for="link in content.resumeSubnav" :key="link.url" class="g-border g-border--white" target="_blank">
           <a :href="link.url" class="hover:text-teal inline-flex items-center gap-1">
             <span>
               {{ link.name }}
