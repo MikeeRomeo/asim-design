@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useTilt } from '~/composables/useTilt'
 
+const runtimeConfig = useRuntimeConfig()
+const baseUrl = runtimeConfig.public.NUXT_APP_BASE_URL || '/'
+
 const carouselConfig = {
   itemsToShow: 'auto',
   wrapAround: true,
@@ -22,43 +25,43 @@ const { tilt, glareStyle } = useTilt(card, {
 const brands = [
   {
     name: 'PGGM',
-    logo: '/graphics/logos/pggm.svg',
+    logo: 'graphics/logos/pggm.svg',
   },
   {
     name: 'NS',
-    logo: '/graphics/logos/ns.svg',
+    logo: 'graphics/logos/ns.svg',
   },
   {
     name: 'aegon',
-    logo: '/graphics/logos/aegon.svg',
+    logo: 'graphics/logos/aegon.svg',
   },
   {
     name: 'estg',
-    logo: '/graphics/logos/estg.svg',
+    logo: 'graphics/logos/estg.svg',
   },
   {
     name: 'nshift',
-    logo: '/graphics/logos/nshift.svg',
+    logo: 'graphics/logos/nshift.svg',
   },
   {
     name: 'skillzilla',
-    logo: '/graphics/logos/skillzilla.svg',
+    logo: 'graphics/logos/skillzilla.svg',
   },
   {
     name: 'timing',
-    logo: '/graphics/logos/timing.svg',
+    logo: 'graphics/logos/timing.svg',
   },
   {
     name: 'valtech',
-    logo: '/graphics/logos/valtech.svg',
+    logo: 'graphics/logos/valtech.svg',
   },
   {
     name: 'volkswagen',
-    logo: '/graphics/logos/volkswagen.svg',
+    logo: 'graphics/logos/volkswagen.svg',
   },
   {
     name: 'trackbee',
-    logo: '/graphics/logos/trackbee.svg',
+    logo: 'graphics/logos/trackbee.svg',
   },
 ]
 </script>
@@ -82,7 +85,7 @@ const brands = [
     <Carousel v-bind="carouselConfig">
       <Slide v-for="brand in brands" :key="brand.name">
         <div class="carousel__item glassy g-border g-border--white rounded-lg cursor-grab">
-          <img :src="brand.logo" :alt="`${brand.name} logo`" class="h-14 px-3 pointer-events-none">
+          <img :src="`${baseUrl}${brand.logo}`" :alt="`${brand.name} logo`" class="h-14 px-3 pointer-events-none">
         </div>
       </Slide>
     </Carousel>

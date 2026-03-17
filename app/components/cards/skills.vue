@@ -19,26 +19,29 @@ const { tilt, glareStyle } = useTilt(card, {
   mobile: true,
 })
 
+const runtimeConfig = useRuntimeConfig()
+const baseUrl = runtimeConfig.public.NUXT_APP_BASE_URL || '/'
+
 const brands = [
   {
     name: 'jira',
-    logo: '/graphics/skills/jira.svg',
+    logo: 'graphics/skills/jira.svg',
   },
   {
     name: 'figma',
-    logo: '/graphics/skills/figma.svg',
+    logo: 'graphics/skills/figma.svg',
   },
   {
     name: 'sketch',
-    logo: '/graphics/skills/sketch.svg',
+    logo: 'graphics/skills/sketch.svg',
   },
   {
     name: 'azure',
-    logo: '/graphics/skills/azure.svg',
+    logo: 'graphics/skills/azure.svg',
   },
   {
     name: 'slack',
-    logo: '/graphics/skills/slack.svg',
+    logo: 'graphics/skills/slack.svg',
   },
 
 ]
@@ -61,7 +64,7 @@ const brands = [
     <Carousel v-bind="carouselConfig">
       <Slide v-for="brand in brands" :key="brand.name">
         <div class="carousel__item glassy g-border g-border--white rounded-lg cursor-grab">
-          <img :src="brand.logo" :alt="`${brand.name} logo`" class="h-14 pointer-events-none">
+          <img :src="`${baseUrl}${brand.logo}`" :alt="`${brand.name} logo`" class="h-14 pointer-events-none">
         </div>
       </Slide>
     </Carousel>
