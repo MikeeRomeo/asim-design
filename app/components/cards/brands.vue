@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { useTilt } from '~/composables/useTilt'
 
-const runtimeConfig = useRuntimeConfig()
-const baseUrl = runtimeConfig.public.NUXT_APP_BASE_URL || '/'
+const baseUrl = '/asim-design/'
 
 const carouselConfig = {
   itemsToShow: 'auto',

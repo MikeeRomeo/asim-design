@@ -19,8 +19,7 @@ const { tilt, glareStyle } = useTilt(card, {
   mobile: true,
 })
 
-const runtimeConfig = useRuntimeConfig()
-const baseUrl = runtimeConfig.public.NUXT_APP_BASE_URL || '/'
+const baseUrl = '/asim-design/'
 
 const brands = [
   {
