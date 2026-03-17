@@ -1,7 +1,9 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-  baseURL: '/asim-design/',
+  app: {
+    baseURL: '/asim-design/',
+  },
   compatibilityDate: '2025-07-15',
   modules: ['@vueuse/nuxt', 'vue3-carousel-nuxt'],
   devtools: { enabled: true },
