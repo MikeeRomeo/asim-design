@@ -5,9 +5,9 @@ export default defineNuxtConfig({
     baseURL: '/asim-design/',
   },
   nitro: {
-    preset: 'github_pages',
     prerender: {
-      failOnError: false,
+      routes: ['/'], // only prerender homepage (crawler will still find others)
+      ignore: ['/200.html', '/404.html'],
     },
   },
   compatibilityDate: '2025-07-15',
