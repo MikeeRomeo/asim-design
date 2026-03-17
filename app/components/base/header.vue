@@ -38,7 +38,7 @@ const chevronClasses = computed(() => ({
 </script>
 
 <template>
-  <header class="header pbe-6 px-5 lg:py-12 md:px-10 stagger-anim">
+  <header class="header pbe-6 px-5 relative z-999 lg:py-12 md:px-10 stagger-anim">
     <nav class="flex items-center justify-between py-6 flex-wrap">
       <div class="logo">
         <img src="/img/logo.svg" alt="Logo">
@@ -48,7 +48,7 @@ const chevronClasses = computed(() => ({
           <a :href="content.approachUrl" class="nav-link g-border">Aanpak</a>
         </li>
         <li ref="submenuDesktop" class="group max-md:hidden">
-          <button type="button" class="nav-link g-border cursor-pointer relative">
+          <button type="button" class="nav-link g-border cursor-pointer relative" @click.stop="toggleSubmenu">
             <span class="mr-3">Resume</span>
             <img src="/icons/chevron.svg" class="size-4 inline transition-transform" :class="[chevronClasses]" alt="submenu">
           </button>
@@ -63,7 +63,7 @@ const chevronClasses = computed(() => ({
             </li>
           </ul>
         </li>
-        <li><span class="nav-link nav-link--active nav-link--inactive">{{ content.isAvailable ? 'Beschikbaar' : 'Niet beschikbaar' }}</span></li>
+        <li><span class="nav-link nav-link--active" :class="{ 'nav-link--inactive': !content.isAvailable }">{{ content.isAvailable ? 'Beschikbaar' : 'Niet beschikbaar' }}</span></li>
       </ul>
     </nav>
   </header>
