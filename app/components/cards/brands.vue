@@ -23,6 +23,10 @@ const { tilt, glareStyle } = useTilt(card, {
 
 const brands = [
   {
+    name: 'Centraal Beheer',
+    logo: 'graphics/logos/cb.svg',
+  },
+  {
     name: 'PGGM',
     logo: 'graphics/logos/pggm.svg',
   },
