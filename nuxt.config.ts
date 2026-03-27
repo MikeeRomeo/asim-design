@@ -1,6 +1,9 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    appBaseURL: process.env.NUXT_APP_BASE_URL || '/',
+  },
   nitro: {
     prerender: {
       routes: ['/'], // only prerender homepage (crawler will still find others)
