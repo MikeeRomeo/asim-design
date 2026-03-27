@@ -2,7 +2,9 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   runtimeConfig: {
-    appBaseURL: process.env.NUXT_APP_BASE_URL || '/',
+    public: {
+      appBaseURL: process.env.NUXT_APP_BASE_URL || '/',
+    },
   },
   nitro: {
     prerender: {

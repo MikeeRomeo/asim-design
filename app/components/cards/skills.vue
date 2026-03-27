@@ -20,7 +20,7 @@ const { tilt, glareStyle } = useTilt(card, {
 })
 
 const config = useRuntimeConfig()
-const baseUrl = config.appBaseURL || '/'
+const baseUrl = config.public.appBaseURL || '/'
 
 const brands = [
   {

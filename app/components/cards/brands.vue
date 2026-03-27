@@ -2,7 +2,7 @@
 import { useTilt } from '~/composables/useTilt'
 
 const config = useRuntimeConfig()
-const baseUrl = config.appBaseURL || '/'
+const baseUrl = config.public.appBaseURL || '/'
 
 const carouselConfig = {
   itemsToShow: 'auto',
