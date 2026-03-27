@@ -19,7 +19,8 @@ const { tilt, glareStyle } = useTilt(card, {
   mobile: true,
 })
 
-const baseUrl = '/asim-design/'
+const config = useRuntimeConfig()
+const baseUrl = config.appBaseURL || '/'
 
 const brands = [
   {
@@ -63,7 +64,7 @@ const brands = [
     <Carousel v-bind="carouselConfig">
       <Slide v-for="brand in brands" :key="brand.name">
         <div class="carousel__item glassy g-border g-border--white rounded-lg cursor-grab">
-          <img :src="`${baseUrl}${brand.logo}`" :alt="`${brand.name} logo`" class="h-14 pointer-events-none">
+          <img :src="`${baseUrl}${brand.logo}`" :alt="`${brand.name} logo`" class="h-14 p-2 pointer-events-none">
         </div>
       </Slide>
     </Carousel>
