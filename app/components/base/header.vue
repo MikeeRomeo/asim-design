@@ -45,7 +45,7 @@ const chevronClasses = computed(() => ({
       </div>
       <ul class="navbar" role="navbar">
         <li class="max-md:hidden">
-          <a :href="content.approachUrl" class="nav-link g-border" target="_blank">Aanpak</a>
+          <a :href="content.approachUrl" class="nav-link g-border" target="_blank">Case studies</a>
         </li>
         <li ref="submenuDesktop" class="group max-md:hidden">
           <button type="button" class="nav-link g-border cursor-pointer relative">
